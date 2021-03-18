@@ -1,0 +1,15 @@
+.intro {
+  margin: 20px auto;
+}
+.intro h3 {
+  font-family: 'Montserrat';
+  margin: 5px 0 15px;
+  font-size: 22px;
+  text-align: center;
+  /* width: 80%; */
+}
+.intro p {
+  padding: 0 50px;
+  /* color: #2d3e50a2; */
+  color: #2d3e50;
+}
