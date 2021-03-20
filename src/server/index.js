@@ -34,27 +34,27 @@ app.post('/analyze-article', function (req, res) {
     .then((response) => {
       const stripedHTML = response.replace('<[^>]+>/g', ' ')
       const decodedStripedHTML = he.decode(stripedHTML)
+      const meaningCloudURL = `api.meaningcloud.com/sentiment-2.1?key=${key}&lang=<lang>&txt=${decodedStripedHTML}&model=<model>`
+      fetch(meaningCloudURL, {
+        method: 'POST',
+        headers: {},
+        // maxRedirects: 20,
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          projectData = {
+            agreement: response.agreement,
+            subjectivity: response.subjectivity,
+            confidence: response.confidence,
+            irony: response.irony,
+          }
+          res.send({ status: 'success' })
+        })
+        .catch((error) => console.log(error))
     })
-  // 3-analyze article using meaning cloud API,with text content and license key
-  // 4-Return acquired data back to client through projectData object
-  const meaningCloudURL = `api.meaningcloud.com/sentiment-2.1?key=${key}&lang=<lang>&txt=${decodedStripedHTML}&model=<model>`
-  fetch(meaningCloudURL, {
-    method: 'POST',
-    headers: {},
-    // maxRedirects: 20,
-  })
-    .then((response) => response.json())
-    .then((response) => {
-      projectData = {
-        agreement: response.agreement,
-        subjectivity: response.subjectivity,
-        confidence: response.confidence,
-        irony: response.irony,
-      }
-      res.send({ status: 'success' })
-    })
-    .catch((error) => console.log(error))
 })
+// 3-analyze article using meaning cloud API,with text content and license key
+// 4-Return acquired data back to client through projectData object
 
 app.get('/updateData', function (req, res) {
   res.send(projectData)

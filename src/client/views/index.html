@@ -24,15 +24,15 @@
         <div class="card">
           <div class="input-control">
             <label for="url">Article/Blog URL</label>
-            <input type="url" />
+            <input type="url" id="client-url" pattern="https://.*" required />
           </div>
-          <button>Submit</button>
+          <button id="form-btn">Submit</button>
         </div>
       </div>
       <div class="result_div hidden">
         <h3 class="result_title">Sentiment Analysis Result</h3>
         <div class="result">
-          <ul class="result_list">
+          <ul class="result_list" id="result">
             <li class="result_item">item 1</li>
             <li class="result_item">item 2</li>
             <li class="result_item">item 3</li>
