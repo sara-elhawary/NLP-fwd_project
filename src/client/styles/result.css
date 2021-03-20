@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.result_div {
+  background-color: #9bd7ec;
+  margin-top: 70px;
+  padding: 20px 40px;
+  border-radius: 13px;
+  font-family: 'Roboto Condensed';
+}
+
+.result_title {
+  margin-bottom: 10px;
+  font-family: 'Montserrat';
+}
+
+.result_list {
+  list-style-type: none;
+  color: #2d3e50;
+}

@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/card.css" />
     <link rel="stylesheet" href="../styles/intro.css" />
-    <link rel="stylesheet" href="../styles/left.css" />
-    <link rel="stylesheet" href="../styles/right.css" />
+    <link rel="stylesheet" href="../styles/form.css" />
     <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/result.css" />
 
     <title>Sentiment Meter</title>
   </head>
   <body>
     <div class="container">
-      <img src="../assets/bg.png" alt="girl_reading" />
-
-      <div class="right">
+      <div class="form">
         <div class="intro">
           <h3 id="title">Welcome to the Sentiment Analyzer</h3>
           <p>
@@ -29,6 +27,17 @@
             <input type="url" />
           </div>
           <button>Submit</button>
+        </div>
+      </div>
+      <div class="result_div hidden">
+        <h3 class="result_title">Sentiment Analysis Result</h3>
+        <div class="result">
+          <ul class="result_list">
+            <li class="result_item">item 1</li>
+            <li class="result_item">item 2</li>
+            <li class="result_item">item 3</li>
+            <li class="result_item">item 4</li>
+          </ul>
         </div>
       </div>
     </div>
