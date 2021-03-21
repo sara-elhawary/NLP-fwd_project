@@ -56,6 +56,6 @@ app.post('/analyze-article', function (req, res) {
 // 3-analyze article using meaning cloud API,with text content and license key
 // 4-Return acquired data back to client through projectData object
 
-app.get('/updateData', function (req, res) {
+app.get('/update-data', function (req, res) {
   res.send(projectData)
 })
