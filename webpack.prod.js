@@ -38,7 +38,22 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new WorkboxPlugin.GenerateSW(),
+    new WorkboxPlugin.GenerateSW({
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+      runtimeCaching: [
+        {
+          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images',
+            expiration: {
+              maxEntries: 10,
+            },
+          },
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
   ],
   optimization: {
