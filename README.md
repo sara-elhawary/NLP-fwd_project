@@ -6,7 +6,7 @@
 
 ## General info
 
-  <img src="/home/sarah/courses/fwd-advanced/projects/NLP/src/client/assets/screenshot.jpeg">
+![Website screenshot](./src/client/assets/screenshot.jpeg)
 
 This project is a Sentiment Analyzer for performing a detailed multilingual sentiment analysis of texts from different sources.
 
