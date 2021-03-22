@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+#error-display {
+  background-color: #d1ebf5b7;
+  // border: green solid 1px;
+  text-align: center;
+  border-radius: 13px;
+  margin-top: 10px;
+  color: #ed5664;
+  padding: 8px 25px;
+  font-family: 'Roboto Condensed';
+}
+.error_title {
+  margin-bottom: 3px;
+  font-size: 20px;
+}

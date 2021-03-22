@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server/index.js",
+    "start": "nodemon src/server/server.js",
     "dev": "rm -rf dist && webpack --watch --config webpack.dev.js",
     "build": "rm -rf dist && webpack --config webpack.prod.js"
   },
@@ -42,6 +42,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.27.1",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "workbox-webpack-plugin": "^6.1.2"
   }
 }

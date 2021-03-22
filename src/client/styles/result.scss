@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.result_div {
-  background-color: #d1ebf5b7;
-  margin-top: 70px;
+#result_div {
+  // background-color: #d1ebf5b7;
+  background-color: #ed5664;
+  color: #ecf0f1;
+  margin-top: 20px;
   padding: 20px 40px;
   border-radius: 13px;
   font-family: 'Roboto Condensed';
@@ -16,5 +18,5 @@
 
 .result_list {
   list-style-type: none;
-  color: #2d3e50;
+  // color: #2d3e50;
 }

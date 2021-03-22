@@ -34,10 +34,12 @@ export const start = (alertService, componentService) => {
               componentService.getResult(response)
               alertService.clearError()
               componentService.updateUI()
+              componentService.resetUI()
             })
         })
     } else {
       alertService.displayError()
+      alertService.clearError()
     }
   })
 }

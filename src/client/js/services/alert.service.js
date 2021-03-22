@@ -1,16 +1,19 @@
 export class AlertService {
   constructor() {
     this.errorDisplay = document.getElementById('error-display')
+    this.clientURL = document.getElementById('client-url')
   }
   displayError() {
     console.log('display error is working')
-
-    this.errorDisplay.innerHTML = '<h3>ERROR</h3><p>Please Enter valid URL</p>'
-    // setTimeout(clearError, 3000)
+    this.errorDisplay.classList.remove('hidden')
   }
   clearError() {
     console.log('clean error is working')
-
-    this.errorDisplay.classList.add('hidden')
+    setTimeout(() => {
+      this.errorDisplay.classList.add('hidden')
+      // @ts-ignore
+      this.clientURL.value = ''
+    }, 3000)
+    console.log('after')
   }
 }
