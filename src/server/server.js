@@ -60,3 +60,5 @@ app.post('/analyze-article', function (req, res) {
 app.get('/update-data', function (req, res) {
   res.send(projectData)
 })
+
+module.exports = { app }
