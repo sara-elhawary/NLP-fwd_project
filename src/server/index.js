@@ -1,5 +1,4 @@
 const express = require('express')
-// const bodyParser = require('body-parser')
 const cors = require('cors')
 const path = require('path')
 const fetch = require('isomorphic-fetch')
@@ -13,7 +12,7 @@ console.log(__dirname)
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
-app.use(express.static(path.join(__dirname, '../client')))
+app.use(express.static(path.join(__dirname, '../../dist')))
 
 app.listen(port, function () {
   console.log(`App is runnig on port ${port} `)
@@ -22,7 +21,7 @@ app.listen(port, function () {
 let projectData = {}
 
 app.get('/', function (req, res) {
-  res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
+  res.sendFile('/dist/index.html', { root: __dirname + '/../..' })
 })
 
 app.post('/analyze-article', function (req, res) {

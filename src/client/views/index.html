@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/card.css" />
+    <!-- <link rel="stylesheet" href="../styles/card.css" />
     <link rel="stylesheet" href="../styles/intro.css" />
     <link rel="stylesheet" href="../styles/form.css" />
     <link rel="stylesheet" href="../styles/base.css" />
     <link rel="stylesheet" href="../styles/result.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/footer.css" /> -->
 
     <title>Sentiment Meter</title>
   </head>
   <body>
     <div class="container">
+      <div id="error-display">
+        <p>ERROR:please enter a valid url</p>
+      </div>
       <div class="form">
         <div class="intro">
           <h3 id="title">Welcome to the Sentiment Analyzer</h3>
@@ -25,13 +28,7 @@
         <div class="card">
           <div class="input-control">
             <label for="url">Article/Blog URL</label>
-            <input
-              type="url"
-              id="client-url"
-              pattern="https://.*"
-              required
-              value="https://blog.bearer.sh/node-http-request/"
-            />
+            <input type="url" id="client-url" pattern="https://.*" required />
           </div>
           <button id="form-btn">Submit</button>
         </div>
@@ -54,7 +51,7 @@
       <p>&copy; 2021 Sara Elhawary.All Rights Reserved</p>
       <p>FWD Initiative Advanced Project 1</p>
     </div>
-    <script src="../js/app.js"></script>
-    <script src="../../../dist/main.js"></script>
+    <!-- <script src="../js/app.js"></script>
+    <script src="../../../dist/main.js"></script> -->
   </body>
 </html>
