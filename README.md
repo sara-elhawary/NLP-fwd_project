@@ -2,13 +2,13 @@
 
 - [General info](#general-info)
 - [Technologies](#technologies)
-- [Setup](#setup)
+- [Credits](#credits)
 
 ## General info
 
 ![Website screenshot](./src/client/assets/screenshot.jpeg)
 
-This project is a Sentiment Analyzer for performing a detailed multilingual sentiment analysis of texts from different sources.
+This project is the first project in FWD Egypt initiative with Udacity in Advanced Web Development. It is a Sentiment Analyzer for performing a detailed multilingual sentiment analysis of texts from different sources.
 
 The text provided is analyzed to determine if it expresses a positive/negative/neutral sentiment; to do this, the local polarity of the different sentences in the text is identified and the relationship between them evaluated, resulting in a global polarity value for the whole text.
 
@@ -18,16 +18,8 @@ Besides polarity at sentence and global level, Sentiment Analysis uses advanced 
 
 Project is created with:
 
-- Lorem version: 12.3
-- Ipsum version: 2.33
-- Ament library version: 999
+- Webpack: 5.27.1
 
-## Setup
+## Credits
 
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+Many thanks to Mr/Mohammed El-zanaty our course session Lead.
