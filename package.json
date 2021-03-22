@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sara-elhawary/NLP-fwd_project#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
