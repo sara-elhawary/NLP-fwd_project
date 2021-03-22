@@ -28,13 +28,15 @@ app.get('/', function (req, res) {
 app.post('/analyze-article', function (req, res) {
   // 1-Extract article URL from
   // 2-extract text content for client URL ,using Regex and he lib.
-  let clientURL = req.body
+  let { clientURL } = req.body
+  // console.log(clientURL)
+
   fetch(clientURL)
     .then((response) => response.text())
     .then((response) => {
       const stripedHTML = response.replace('<[^>]+>/g', ' ')
       const decodedStripedHTML = he.decode(stripedHTML)
-      const meaningCloudURL = `api.meaningcloud.com/sentiment-2.1?key=${key}&lang=<lang>&txt=${decodedStripedHTML}&model=<model>`
+      const meaningCloudURL = `https://api.meaningcloud.com/sentiment-2.1?key=${key}&lang=en&txt=${decodedStripedHTML}&model=en`
       fetch(meaningCloudURL, {
         method: 'POST',
         headers: {},

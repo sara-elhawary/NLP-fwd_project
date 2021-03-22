@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/form.css" />
     <link rel="stylesheet" href="../styles/base.css" />
     <link rel="stylesheet" href="../styles/result.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
 
     <title>Sentiment Meter</title>
   </head>
@@ -24,12 +25,19 @@
         <div class="card">
           <div class="input-control">
             <label for="url">Article/Blog URL</label>
-            <input type="url" id="client-url" pattern="https://.*" required />
+            <input
+              type="url"
+              id="client-url"
+              pattern="https://.*"
+              required
+              value="https://blog.bearer.sh/node-http-request/"
+            />
           </div>
           <button id="form-btn">Submit</button>
         </div>
       </div>
-      <div class="result_div hidden">
+      <div class="hidden" id="result_div">
+        <!-- <div class="result_div"> -->
         <h3 class="result_title">Sentiment Analysis Result</h3>
         <div class="result">
           <ul class="result_list" id="result">
@@ -41,6 +49,12 @@
         </div>
       </div>
     </div>
-    <script src="../index.js"></script>
+    <div class="footer">
+      <h4>Sentiment Meter</h4>
+      <p>&copy; 2021 Sara Elhawary.All Rights Reserved</p>
+      <p>FWD Initiative Advanced Project 1</p>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../../../dist/main.js"></script>
   </body>
 </html>

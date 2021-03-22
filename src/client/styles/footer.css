@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.footer {
+  /* border: 1px red solid; */
+  background-color: transparent;
+  padding: 22px 40px;
+  margin-top: 70px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #1a232e;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+.footer h4 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.footer p {
+  margin-top: 3px;
+  font-size: 12px;
+}
