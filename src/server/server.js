@@ -1,4 +1,6 @@
 const express = require('express')
+require('dotenv').config()
+
 const cors = require('cors')
 const path = require('path')
 const fetch = require('isomorphic-fetch')
@@ -6,7 +8,6 @@ const he = require('he')
 
 const app = express()
 const port = 8081
-const key = 'a1548456363cd650b1bdb2dd425e144a'
 console.log(__dirname)
 
 app.use(express.json())
@@ -35,7 +36,7 @@ app.post('/analyze-article', function (req, res) {
     .then((response) => {
       const stripedHTML = response.replace('<[^>]+>/g', ' ')
       const decodedStripedHTML = he.decode(stripedHTML)
-      const meaningCloudURL = `https://api.meaningcloud.com/sentiment-2.1?key=${key}&lang=en&txt=${decodedStripedHTML}&model=en`
+      const meaningCloudURL = `https://api.meaningcloud.com/sentiment-2.1?key=${process.env.MEANINGCLOUD_API_KEY}&lang=en&txt=${decodedStripedHTML}&model=en`
       fetch(meaningCloudURL, {
         method: 'POST',
         headers: {},

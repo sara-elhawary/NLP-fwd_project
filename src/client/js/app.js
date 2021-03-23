@@ -10,7 +10,7 @@ export const start = (alertService, componentService) => {
     // console.log('click is on   watch for change')
 
     if (isValidURL(input)) {
-      fetch('/analyze-article', {
+      fetch('http://localhost:8081/analyze-article', {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const start = (alertService, componentService) => {
         })
         .then((response) => {
           console.log(response)
-          fetch('/update-data')
+          fetch('http://localhost:8081/update-data')
             .then((response) => response.json())
             .then((response) => {
               console.log('fetch is working')
@@ -34,7 +34,6 @@ export const start = (alertService, componentService) => {
               componentService.getResult(response)
               alertService.clearError()
               componentService.updateUI()
-              componentService.resetUI()
             })
         })
     } else {

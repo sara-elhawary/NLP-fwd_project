@@ -26,13 +26,7 @@ export class ComponentService {
     console.log('update is working')
     this.resultDiv.classList.remove('hidden')
   }
-  resetUI() {
-    setTimeout(() => {
-      this.resultDiv.classList.add('hidden')
-      // @ts-ignore
-      this.clientURL.value = ''
-    }, 8000)
-  }
+
   getInput() {
     // @ts-ignore
     return this.clientURL.value
